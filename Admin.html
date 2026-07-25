@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Cebu Store Locator</title>
+  <link rel="stylesheet" href="Website.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <p>Add new stores and items easily</p>
+  </header>
+
+  <nav class="navbar">
+  <ul>
+    <li><a href="home.html">🏠 Home</a></li>
+    <li><a href="index.html">🔍 Search</a></li>
+    <li><a href="admin.html">⚙️ Admin Panel</a></li>
+  </ul>
+</nav>
+
+
+  <main>
+    <section class="form-section">
+      <h2>Add Store</h2>
+      <form id="storeForm">
+        <input type="text" id="storeName" placeholder="Store Name" required>
+        <input type="text" id="storeAddress" placeholder="Address" required>
+        <input type="url" id="storeMaps" placeholder="Google Maps Link">
+        <input type="url" id="storeWebsite" placeholder="Website Link">
+        <button type="submit">Add Store</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h2>Add Item</h2>
+      <form id="itemForm">
+        <input type="text" id="itemName" placeholder="Item Name" required>
+        <input type="text" id="itemDesc" placeholder="Description">
+        <input type="number" id="itemStoreId" placeholder="Store ID" required>
+        <button type="submit">Add Item</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+  <h2>Add Item</h2>
+  <form id="itemForm">
+    <input type="text" id="itemName" placeholder="Item Name" required>
+    <input type="text" id="itemDesc" placeholder="Description">
+    <input type="number" id="itemStock" placeholder="Stock Quantity" required>
+    <input type="number" id="itemStoreId" placeholder="Store ID" required>
+    <button type="submit">Add Item</button>
+  </form>
+</section>
+
+<section class="form-section">
+  <h2>Current Items</h2>
+  <table id="itemTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Item Name</th>
+        <th>Description</th>
+        <th>Stock</th>
+        <th>Store ID</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cebu Store Locator Project</p>
+  </footer>
+
+  <script src="Admin.js"></script>
+</body>
+</html>
