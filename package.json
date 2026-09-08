@@ -1,0 +1,14 @@
+{
+  "name": "cebu-store-locator",
+  "version": "1.0.0",
+  "description": "Cebu Store Locator web application",
+  "main": "Server.js",
+  "scripts": {
+    "start": "node Server.js",
+    "dev": "node --watch Server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.14.4"
+  }
+}
