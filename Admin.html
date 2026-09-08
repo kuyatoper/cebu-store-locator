@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Panel - Cebu Store Locator</title>
   <link rel="stylesheet" href="Website.css">
 </head>
 <body>
   <header>
     <h1>Admin Panel</h1>
-    <p>Add new stores and items easily</p>
+    <p>Add and manage stores and items</p>
   </header>
 
   <nav class="navbar">
-  <ul>
-    <li><a href="home.html">🏠 Home</a></li>
-    <li><a href="index.html">🔍 Search</a></li>
-    <li><a href="admin.html">⚙️ Admin Panel</a></li>
-  </ul>
-</nav>
-
+    <ul>
+      <li><a href="Home.html">🏠 Home</a></li>
+      <li><a href="Index.html">🔍 Search</a></li>
+      <li><a href="Admin.html">⚙️ Admin Panel</a></li>
+    </ul>
+  </nav>
 
   <main>
     <section class="form-section">
@@ -37,39 +37,32 @@
       <form id="itemForm">
         <input type="text" id="itemName" placeholder="Item Name" required>
         <input type="text" id="itemDesc" placeholder="Description">
-        <input type="number" id="itemStoreId" placeholder="Store ID" required>
+        <input type="number" id="itemStock" placeholder="Stock Quantity" min="0" required>
+        <input type="number" id="itemStoreId" placeholder="Store ID" min="1" required>
         <button type="submit">Add Item</button>
       </form>
+      <p id="itemHint">Add a store first, then use its Store ID when adding an item.</p>
     </section>
 
-    <section class="form-section">
-  <h2>Add Item</h2>
-  <form id="itemForm">
-    <input type="text" id="itemName" placeholder="Item Name" required>
-    <input type="text" id="itemDesc" placeholder="Description">
-    <input type="number" id="itemStock" placeholder="Stock Quantity" required>
-    <input type="number" id="itemStoreId" placeholder="Store ID" required>
-    <button type="submit">Add Item</button>
-  </form>
-</section>
-
-<section class="form-section">
-  <h2>Current Items</h2>
-  <table id="itemTable">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Item Name</th>
-        <th>Description</th>
-        <th>Stock</th>
-        <th>Store ID</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-</section>
-
-
+    <section class="form-section table-section">
+      <h2>Current Items</h2>
+      <button type="button" id="refreshItems">🔄 Refresh Items</button>
+      <div class="table-wrapper">
+        <table id="itemTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Item Name</th>
+              <th>Description</th>
+              <th>Stock</th>
+              <th>Store</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
   </main>
 
   <footer>
